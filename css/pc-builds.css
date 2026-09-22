@@ -1,0 +1,919 @@
+/* =========================================================
+   WA4TECHSOS — CUSTOM PC BUILDS PAGE
+========================================================= */
+
+
+/* =========================================================
+   SHARED SECTION RHYTHM
+========================================================= */
+
+.pc-builds-page .section {
+    padding: 140px 0;
+}
+
+.pc-builds-page .section-container {
+    width: min(var(--max-width), calc(100% - 14%));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.pc-builds-page .page-hero {
+    min-height: 85vh;
+    padding: 150px max(7%, calc((100% - var(--max-width)) / 2)) 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(201, 125, 66, 0.14),
+            transparent 40%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        var(--bg);
+}
+
+.pc-builds-page .hero-image {
+    position: relative;
+    z-index: 1;
+
+    min-height: 460px;
+}
+
+.pc-builds-page .hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+}
+
+.pc-builds-page .page-hero::after {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    right: 9%;
+    top: 24%;
+    border-top: 1px solid rgba(201, 125, 66, 0.5);
+    border-right: 1px solid rgba(201, 125, 66, 0.5);
+    pointer-events: none;
+}
+
+.pc-builds-page .page-hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.pc-builds-page .hero-label {
+    margin: 0 0 28px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pc-builds-page .page-hero h1 {
+    margin: 0 0 40px;
+
+    max-width: 1000px;
+
+    font-size: clamp(3.2rem, 6vw, 6.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
+
+.pc-builds-page .page-hero h1 span {
+    color: var(--accent);
+}
+
+.pc-builds-page .hero-text {
+    max-width: 650px;
+    margin: 0 0 40px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.pc-builds-page .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.pc-builds-page .section-heading {
+    max-width: 900px;
+    margin-bottom: 70px;
+}
+
+.pc-builds-page .section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.pc-builds-page .section-heading h2 span,
+.pc-builds-page .intro-content h2 span,
+.pc-builds-page .why-build-heading h2 span,
+.pc-builds-page .final-cta-content h2 span {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.pc-intro .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 90px;
+    align-items: center;
+}
+
+.pc-intro .intro-image {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 460px;
+
+    border-radius: var(--radius);
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        #101a15;
+}
+
+.pc-intro .intro-image img {
+    width: 100%;
+    height: 100%;
+    scale: 1.11;
+    display: block;
+
+    object-fit: cover;
+}
+
+.pc-intro .intro-image::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    border-top: 1px solid rgba(201, 125, 66, 0.55);
+    border-left: 1px solid rgba(201, 125, 66, 0.55);
+}
+
+.pc-intro .section-label {
+    margin-bottom: 30px;
+}
+
+.pc-intro .intro-content {
+    max-width: 560px;
+}
+
+.pc-intro .intro-content h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.pc-intro .intro-text p {
+    margin: 0 0 18px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.pc-intro .intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   WHAT CAN WE BUILD
+========================================================= */
+
+.build-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.build-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+
+    transition: background 0.3s ease;
+}
+
+.build-card:hover {
+    background: #1c2620;
+}
+
+.build-card-large {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 40px;
+
+    padding: 50px;
+}
+
+.build-card-number {
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+
+    margin-bottom: 30px;
+}
+
+.build-card-large .build-card-number {
+    margin-bottom: 0;
+}
+
+.build-card-content h3 {
+    margin: 0 0 15px;
+
+    color: var(--white);
+
+    font-size: 1.4rem;
+}
+
+.build-card-content > p {
+    margin: 0 0 22px;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.build-card-content ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.build-card-content ul li {
+    position: relative;
+
+    padding-left: 18px;
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.build-card-content ul li::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 7px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   FEATURE
+   (mirrors the homepage's custom-PC feature panel)
+========================================================= */
+
+.pc-feature-section {
+    background: var(--bg);
+}
+
+.pc-feature-container {
+    width: min(var(--max-width), calc(100% - 14%));
+    min-height: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+}
+
+.pc-feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+}
+
+.pc-feature-content .section-label {
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.pc-feature-content h2 {
+    margin: 0 0 25px;
+    color: var(--white);
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.pc-feature-content h2 span {
+    color: var(--accent);
+}
+
+.pc-feature-content > p:not(.section-label) {
+    max-width: 500px;
+    margin: 0 0 20px;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.pc-feature-content .btn {
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.pc-feature-image {
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        #101a15;
+}
+
+.pc-feature-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.pc-feature-image::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 20px;
+    bottom: 20px;
+    border-bottom: 1px solid rgba(201, 125, 66, 0.5);
+    border-right: 1px solid rgba(201, 125, 66, 0.5);
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+   (matches the repairs/diagnostics process pattern)
+========================================================= */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.process-step {
+    min-height: 280px;
+
+    padding: 40px 30px;
+
+    background: var(--bg-card);
+
+    transition: background 0.3s ease;
+}
+
+.process-step:hover {
+    background: #1c2620;
+}
+
+.process-step > span {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+.process-step h3 {
+    margin: 0 0 15px;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+}
+
+.process-step p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   WHY CUSTOM
+========================================================= */
+
+.why-build-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+    align-items: start;
+}
+
+.why-build-heading .section-label {
+    margin-bottom: 30px;
+}
+
+.why-build-heading h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.why-build-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-build-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    gap: 20px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.why-build-item:first-child {
+    padding-top: 0;
+}
+
+.why-build-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.why-build-item > span {
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    padding-top: 4px;
+}
+
+.why-build-item h3 {
+    margin: 0 0 8px;
+
+    color: var(--white);
+
+    font-size: 1.15rem;
+}
+
+.why-build-item p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 850px;
+}
+
+.faq-item {
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+    padding-top: 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item summary {
+    position: relative;
+
+    padding-right: 40px;
+
+    color: var(--white);
+    font-family: var(--font-display);
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    content: "+";
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item p {
+    margin: 20px 0 0;
+
+    max-width: 700px;
+
+    color: var(--text);
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.pc-builds-page .final-cta {
+    padding: 180px 6%;
+}
+
+.final-cta-content {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.final-cta-content .section-label {
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.final-cta-content h2 {
+    margin: 0 0 35px;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.final-cta-content > p {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .pc-builds-page .page-hero {
+        min-height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    .pc-builds-page .hero-image {
+        order: -1;
+        min-height: 340px;
+    }
+
+    .pc-intro .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .pc-intro .intro-image {
+        min-height: 360px;
+    }
+
+    .pc-intro .intro-content {
+        max-width: 100%;
+    }
+
+    .build-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .build-card-large {
+        grid-column: 1 / -1;
+        grid-template-columns: 1fr;
+    }
+
+    .pc-feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pc-feature-image {
+        min-height: 450px;
+        order: -1;
+    }
+
+    .pc-feature-content {
+        padding: 55px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-build-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .pc-builds-page .section {
+        padding: 90px 0;
+    }
+
+    .pc-builds-page .hero-image {
+        display: none;
+    }
+
+    .pc-builds-page .section-container {
+        width: calc(100% - 40px);
+    }
+
+    .pc-builds-page .page-hero {
+        min-height: 85vh;
+        padding: 130px 20px 80px;
+    }
+
+    .pc-builds-page .page-hero h1 {
+        font-size: clamp(3.5rem, 17vw, 6rem);
+    }
+
+    .pc-builds-page .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .pc-builds-page .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .pc-builds-page .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .pc-intro .section-label {
+        margin-bottom: 40px;
+    }
+
+    .pc-builds-page .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .build-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .build-card-large {
+        padding: 35px;
+    }
+
+    .build-card {
+        padding: 32px;
+    }
+
+    .pc-feature {
+        padding: 90px 20px;
+    }
+
+    .pc-feature-container {
+        width: 100%;
+    }
+
+    .pc-feature-content {
+        padding: 45px 28px;
+    }
+
+    .pc-feature-image {
+        min-height: 300px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        min-height: auto;
+        padding: 32px 25px;
+    }
+
+    .process-step > span {
+        margin-bottom: 35px;
+    }
+
+    .why-build-grid {
+        gap: 45px;
+    }
+
+    .why-build-item {
+        grid-template-columns: 40px 1fr;
+        gap: 14px;
+    }
+
+    .faq-item summary {
+        font-size: 1.05rem;
+    }
+
+    .pc-builds-page .final-cta {
+        padding: 120px 6%;
+    }
+
+    .final-cta-content h2 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .pc-builds-page .page-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .pc-builds-page .page-hero h1 {
+        font-size: 3.3rem;
+    }
+
+}

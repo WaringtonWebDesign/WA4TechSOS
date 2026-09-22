@@ -1,0 +1,647 @@
+/* =========================================================
+   WA4TECHSOS — REVIEWS PAGE
+========================================================= */
+
+
+/* =========================================================
+   SHARED SECTION RHYTHM
+========================================================= */
+
+.reviews-page .section {
+    padding: 140px 0;
+}
+
+.reviews-page .section-container {
+    width: min(var(--max-width), calc(100% - 14%));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.reviews-page .page-hero {
+    min-height: 75vh;
+    padding: 150px max(7%, calc((100% - var(--max-width)) / 2)) 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(201, 125, 66, 0.14),
+            transparent 40%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        var(--bg);
+}
+
+.reviews-page .hero-image {
+    position: relative;
+    z-index: 1;
+
+    min-height: 460px;
+}
+
+.reviews-page .hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+}
+
+.reviews-page .page-hero::after {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    right: 9%;
+    top: 24%;
+    border-top: 1px solid rgba(201, 125, 66, 0.5);
+    border-right: 1px solid rgba(201, 125, 66, 0.5);
+    pointer-events: none;
+}
+
+.reviews-page .page-hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.reviews-page .hero-label {
+    margin: 0 0 28px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.reviews-page .page-hero h1 {
+    margin: 0 0 40px;
+
+    max-width: 1000px;
+
+    font-size: clamp(3.2rem, 6vw, 6.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
+
+.reviews-page .page-hero h1 span {
+    color: var(--accent);
+}
+
+.reviews-page .hero-text {
+    max-width: 650px;
+    margin: 0 0 40px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.reviews-page .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.reviews-page .section-heading {
+    max-width: 900px;
+    margin-bottom: 70px;
+}
+
+.reviews-page .section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.reviews-page .section-heading h2 span,
+.reviews-page .intro-content h2 span,
+.reviews-page .review-cta-content h2 span,
+.reviews-page .final-cta-content h2 span {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.reviews-intro .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 90px;
+    align-items: center;
+}
+
+.reviews-intro .intro-image {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 460px;
+
+    border-radius: var(--radius);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        #101a15;
+}
+
+.reviews-intro .intro-image img {
+    width: 100%;
+    height: 100%;
+    scale: 1.05;
+    display: block;
+
+    object-fit: cover;
+}
+
+.reviews-intro .intro-image::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    border-top: 1px solid rgba(201, 125, 66, 0.55);
+    border-left: 1px solid rgba(201, 125, 66, 0.55);
+}
+
+.reviews-intro .section-label {
+    margin-bottom: 30px;
+}
+
+.reviews-intro .intro-content {
+    max-width: 560px;
+}
+
+.reviews-intro .intro-content h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.reviews-intro .intro-text p {
+    margin: 0 0 18px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.reviews-intro .intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   REVIEWS EMPTY STATE
+========================================================= */
+
+.reviews-empty {
+    position: relative;
+    overflow: hidden;
+
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 80px 60px;
+
+    text-align: center;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.reviews-empty::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 24px;
+    top: 24px;
+    border-top: 1px solid rgba(201, 125, 66, 0.4);
+    border-left: 1px solid rgba(201, 125, 66, 0.4);
+    pointer-events: none;
+}
+
+.reviews-empty::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 24px;
+    bottom: 24px;
+    border-bottom: 1px solid rgba(201, 125, 66, 0.4);
+    border-right: 1px solid rgba(201, 125, 66, 0.4);
+    pointer-events: none;
+}
+
+.empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 125, 66, 0.12);
+    color: var(--accent);
+
+    font-size: 1.5rem;
+}
+
+.reviews-empty h3 {
+    margin: 0 0 15px;
+
+    color: var(--white);
+
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+}
+
+.reviews-empty > p {
+    max-width: 440px;
+    margin: 0 auto 35px;
+
+    color: var(--muted);
+
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REVIEW TYPES
+========================================================= */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.review-type {
+    min-height: 240px;
+
+    padding: 40px 30px;
+
+    background: var(--bg-card);
+
+    transition: background 0.3s ease;
+}
+
+.review-type:hover {
+    background: #1c2620;
+}
+
+.review-type > span {
+    display: block;
+
+    margin-bottom: 40px;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+.review-type h3 {
+    margin: 0 0 12px;
+
+    color: var(--white);
+
+    font-size: 1.15rem;
+}
+
+.review-type p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REVIEW CTA
+   (a distinct bordered panel so it reads differently from
+   the full-bleed final CTA further down the page)
+========================================================= */
+
+.review-cta {
+    padding: 0 6% 140px;
+}
+
+.review-cta-content {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 90px 6%;
+
+    text-align: center;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.review-cta-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(201, 125, 66, 0.1),
+            transparent 60%
+        );
+    pointer-events: none;
+}
+
+.review-cta-content .section-label {
+    position: relative;
+    justify-content: center;
+
+    margin-bottom: 35px;
+}
+
+.review-cta-content h2 {
+    position: relative;
+    margin: 0 0 25px;
+
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.review-cta-content > p {
+    position: relative;
+
+    max-width: 480px;
+
+    margin: 0 auto 35px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+.review-cta-content .btn {
+    position: relative;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.reviews-page .final-cta {
+    padding: 180px 6%;
+}
+
+.final-cta-content {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.final-cta-content .section-label {
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.final-cta-content h2 {
+    margin: 0 0 35px;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.final-cta-content > p {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .reviews-page .page-hero {
+        min-height: 70vh;
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-page .hero-image {
+        order: -1;
+        min-height: 340px;
+    }
+
+    .reviews-intro .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .reviews-intro .intro-image {
+        min-height: 360px;
+    }
+
+    .reviews-intro .intro-content {
+        max-width: 100%;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .reviews-page .section {
+        padding: 90px 0;
+    }
+
+    .reviews-page .hero-image {
+        display: none;
+    }
+
+    .reviews-page .section-container {
+        width: calc(100% - 40px);
+    }
+
+    .reviews-page .page-hero {
+        min-height: 75vh;
+        padding: 130px 20px 80px;
+    }
+
+    .reviews-page .page-hero h1 {
+        font-size: clamp(3.5rem, 17vw, 6rem);
+    }
+
+    .reviews-page .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .reviews-page .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .reviews-page .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .reviews-intro .section-label {
+        margin-bottom: 40px;
+    }
+
+    .reviews-page .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .reviews-empty {
+        padding: 55px 30px;
+        border-radius: var(--radius-small);
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-type {
+        min-height: auto;
+        padding: 32px 25px;
+    }
+
+    .review-cta {
+        padding: 0 20px 90px;
+    }
+
+    .review-cta-content {
+        padding: 55px 30px;
+        border-radius: var(--radius-small);
+    }
+
+    .reviews-page .final-cta {
+        padding: 120px 6%;
+    }
+
+    .final-cta-content h2 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .reviews-page .page-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .reviews-page .page-hero h1 {
+        font-size: 3.3rem;
+    }
+
+}

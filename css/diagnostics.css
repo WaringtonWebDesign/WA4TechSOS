@@ -1,0 +1,760 @@
+/* =========================================================
+   WA4TECHSOS — DIAGNOSTICS PAGE
+========================================================= */
+
+
+/* =========================================================
+   SHARED SECTION RHYTHM
+========================================================= */
+
+.diagnostics-page .section {
+    padding: 140px 0;
+}
+
+.diagnostics-page .section-container {
+    width: min(var(--max-width), calc(100% - 14%));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.diagnostics-page .page-hero {
+    min-height: 85vh;
+    padding: 150px max(7%, calc((100% - var(--max-width)) / 2)) 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(201, 125, 66, 0.14),
+            transparent 40%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        var(--bg);
+}
+
+.diagnostics-page .hero-image {
+    position: relative;
+    z-index: 1;
+
+    min-height: 460px;
+}
+
+.diagnostics-page .hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+}
+
+.diagnostics-page .page-hero::after {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    right: 9%;
+    top: 24%;
+    border-top: 1px solid rgba(201, 125, 66, 0.5);
+    border-right: 1px solid rgba(201, 125, 66, 0.5);
+    pointer-events: none;
+}
+
+.diagnostics-page .page-hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.diagnostics-page .hero-label {
+    margin: 0 0 28px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.diagnostics-page .page-hero h1 {
+    margin: 0 0 40px;
+
+    max-width: 1000px;
+
+    font-size: clamp(3.2rem, 6vw, 6.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
+
+.diagnostics-page .page-hero h1 span {
+    color: var(--accent);
+}
+
+.diagnostics-page .hero-text {
+    max-width: 650px;
+    margin: 0 0 40px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.diagnostics-page .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   SECTION LABEL / HEADING
+========================================================= */
+
+.diagnostics-page .section-heading {
+    max-width: 900px;
+    margin-bottom: 70px;
+}
+
+.diagnostics-page .section-heading h2,
+.diagnostics-page .intro-content h2 {
+    margin: 0;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.diagnostics-page .section-heading h2 span,
+.diagnostics-page .intro-content h2 span,
+.diagnostics-page .benefits-heading h2 span,
+.diagnostics-page .final-cta-content h2 span {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.diagnostics-intro .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 90px;
+    align-items: center;
+}
+
+.diagnostics-intro .intro-image {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 460px;
+
+    border-radius: var(--radius);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        #101a15;
+}
+
+.diagnostics-intro .intro-image img {
+    width: 100%;
+    height: 100%;
+    scale: 1.13;
+    display: block;
+
+    object-fit: cover;
+}
+
+.diagnostics-intro .intro-image::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    border-top: 1px solid rgba(201, 125, 66, 0.55);
+    border-left: 1px solid rgba(201, 125, 66, 0.55);
+}
+
+.diagnostics-intro .section-label {
+    margin-bottom: 30px;
+}
+
+.diagnostics-intro .intro-content {
+    max-width: 560px;
+}
+
+.diagnostics-intro .intro-content h2 {
+    margin: 0 0 30px;
+}
+
+.diagnostics-intro .intro-text p {
+    margin: 0 0 18px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.diagnostics-intro .intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DIAGNOSTIC PRICE
+========================================================= */
+
+.price-card {
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 60px;
+    align-items: center;
+
+    padding: 70px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.price-card::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 24px;
+    top: 24px;
+    border-top: 1px solid rgba(201, 125, 66, 0.45);
+    border-right: 1px solid rgba(201, 125, 66, 0.45);
+    pointer-events: none;
+}
+
+.price-content .section-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.price-content h2 {
+    margin: 0 0 20px;
+
+    color: var(--accent);
+
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.price-content > p {
+    max-width: 420px;
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.price-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    padding-left: 60px;
+    border-left: 1px solid var(--border);
+}
+
+.price-note span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 125, 66, 0.14);
+    color: var(--accent);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.price-note p {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DIAGNOSTIC TYPES
+========================================================= */
+
+.diagnostic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.diagnostic-card {
+    min-height: 260px;
+
+    padding: 40px;
+
+    background: var(--bg-card);
+
+    transition: background 0.3s ease;
+}
+
+.diagnostic-card:hover {
+    background: #1c2620;
+}
+
+.diagnostic-number {
+    display: block;
+
+    margin-bottom: 45px;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+.diagnostic-card h3 {
+    margin: 0 0 15px;
+
+    color: var(--white);
+
+    font-size: 1.3rem;
+}
+
+.diagnostic-card p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROCESS
+   (matches the repairs-page process pattern)
+========================================================= */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.process-step {
+    min-height: 280px;
+
+    padding: 40px 30px;
+
+    background: var(--bg-card);
+
+    transition: background 0.3s ease;
+}
+
+.process-step:hover {
+    background: #1c2620;
+}
+
+.process-step > span {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+.process-step h3 {
+    margin: 0 0 15px;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+}
+
+.process-step p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   WHY DIAGNOSTICS
+========================================================= */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+    align-items: start;
+}
+
+.benefits-heading .section-label {
+    margin-bottom: 30px;
+}
+
+.benefits-heading h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    gap: 20px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.benefit-item:first-child {
+    padding-top: 0;
+}
+
+.benefit-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.benefit-item > span {
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    padding-top: 4px;
+}
+
+.benefit-item h3 {
+    margin: 0 0 8px;
+
+    color: var(--white);
+
+    font-size: 1.15rem;
+}
+
+.benefit-item p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.diagnostics-page .final-cta {
+    padding: 180px 6%;
+}
+
+.final-cta-content {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.final-cta-content .section-label {
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.final-cta-content h2 {
+    margin: 0 0 35px;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.final-cta-content > p {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .diagnostics-page .page-hero {
+        min-height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    .diagnostics-page .hero-image {
+        order: -1;
+        min-height: 340px;
+    }
+
+    .diagnostics-intro .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .diagnostics-intro .intro-image {
+        min-height: 360px;
+    }
+
+    .diagnostics-intro .intro-content {
+        max-width: 100%;
+    }
+
+    .price-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px;
+    }
+
+    .price-note {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 30px;
+        border-top: 1px solid var(--border);
+    }
+
+    .diagnostic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .diagnostics-page .section {
+        padding: 90px 0;
+    }
+
+    .diagnostics-page .hero-image {
+        display: none;
+    }
+
+    .diagnostics-page .section-container {
+        width: calc(100% - 40px);
+    }
+
+    .diagnostics-page .page-hero {
+        min-height: 85vh;
+        padding: 130px 20px 80px;
+    }
+
+    .diagnostics-page .page-hero h1 {
+        font-size: clamp(3.5rem, 17vw, 6rem);
+    }
+
+    .diagnostics-page .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .diagnostics-page .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .diagnostics-page .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .diagnostics-intro .section-label {
+        margin-bottom: 40px;
+    }
+
+    .diagnostics-page .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .price-card {
+        padding: 35px;
+        border-radius: var(--radius-small);
+    }
+
+    .diagnostic-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diagnostic-card {
+        min-height: auto;
+        padding: 32px;
+    }
+
+    .process-step {
+        min-height: auto;
+        padding: 32px 25px;
+    }
+
+    .process-step > span {
+        margin-bottom: 35px;
+    }
+
+    .benefits-grid {
+        gap: 45px;
+    }
+
+    .benefit-item {
+        grid-template-columns: 40px 1fr;
+        gap: 14px;
+    }
+
+    .diagnostics-page .final-cta {
+        padding: 120px 6%;
+    }
+
+    .final-cta-content h2 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .diagnostics-page .page-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .diagnostics-page .page-hero h1 {
+        font-size: 3.3rem;
+    }
+
+}

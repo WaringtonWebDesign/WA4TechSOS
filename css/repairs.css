@@ -1,0 +1,914 @@
+/* =========================================================
+   WA4TECHSOS — REPAIRS PAGE
+========================================================= */
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+    min-height: 85vh;
+    padding: 140px max(7%, calc((100% - var(--max-width)) / 2)) 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(201, 125, 66, 0.14),
+            transparent 40%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.035) 0px,
+            rgba(241, 238, 230, 0.035) 1px,
+            transparent 1px,
+            transparent 64px
+        ),
+        var(--bg);
+}
+
+.page-hero .hero-image {
+    position: relative;
+    z-index: 1;
+
+    min-height: 460px;
+}
+
+.page-hero .hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    right: 9%;
+    top: 24%;
+    border-top: 1px solid rgba(201, 125, 66, 0.5);
+    border-right: 1px solid rgba(201, 125, 66, 0.5);
+    pointer-events: none;
+}
+
+.page-hero-content {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero .section-label {
+    margin-bottom: 35px;
+}
+
+.page-hero h1 {
+    margin: 0 0 40px;
+
+    max-width: 1000px;
+
+    font-size: clamp(3.2rem, 6vw, 6.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
+
+.page-hero h1 span {
+    color: var(--accent);
+}
+
+.page-hero-text {
+    max-width: 650px;
+    margin: 0 0 40px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.page-hero .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.repairs-intro {
+    padding: 140px max(7%, calc((100% - var(--max-width)) / 2));
+
+    position: relative;
+    overflow: hidden;
+}
+
+.repairs-intro::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: max(7%, calc((100% - var(--max-width)) / 2));
+    top: 40px;
+    border-top: 1px solid rgba(201, 125, 66, 0.4);
+    border-right: 1px solid rgba(201, 125, 66, 0.4);
+    pointer-events: none;
+}
+
+.repairs-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 90px;
+    align-items: center;
+}
+
+.repairs-intro .repair-image {
+    height: 460px;
+}
+
+.repairs-intro .section-label {
+    margin-bottom: 30px;
+}
+
+.repairs-intro .intro-content {
+    max-width: 560px;
+}
+
+.repairs-intro h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.repairs-intro h2 span {
+    color: var(--accent);
+}
+
+.repairs-intro .intro-text p {
+    margin: 0 0 20px;
+
+    color: var(--text);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.repairs-intro .intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   REPAIR SECTIONS
+========================================================= */
+
+.repair-section {
+    padding: 120px max(7%, calc((100% - var(--max-width)) / 2));
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 90px;
+    align-items: center;
+}
+
+
+/* Alternate section */
+
+.repair-section-reverse {
+    direction: rtl;
+}
+
+.repair-section-reverse > * {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   REPAIR IMAGE
+========================================================= */
+
+.repair-image {
+    width: 100%;
+    height: 580px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(241, 238, 230, 0.04) 0px,
+            rgba(241, 238, 230, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        ),
+        var(--bg-card);
+}
+
+.repair-image::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+    border-top: 1px solid rgba(201, 125, 66, 0.55);
+    border-left: 1px solid rgba(201, 125, 66, 0.55);
+}
+
+.repair-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.repair-image:hover img {
+    transform: scale(1.04);
+}
+
+.repair-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 50%,
+            rgba(15, 22, 19, 0.3)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   REPAIR CONTENT
+========================================================= */
+
+.repair-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.repair-content .section-label {
+    margin-bottom: 30px;
+}
+
+.repair-content h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.repair-content h2 span {
+    color: var(--accent);
+}
+
+.repair-content > p {
+    margin: 0 0 20px;
+
+    color: var(--text);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   REPAIR LIST
+========================================================= */
+
+.repair-list {
+    margin: 35px 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 30px;
+}
+
+.repair-list li {
+    position: relative;
+
+    padding-left: 20px;
+
+    color: var(--text);
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.repair-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 8px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   TEXT LINK
+========================================================= */
+
+.repair-content .text-link {
+    display: inline-flex;
+
+    margin-top: 10px;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.repair-content .text-link:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   SECTION DIVIDER
+========================================================= */
+
+.repair-section + .repair-section {
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process {
+    padding: 150px max(7%, calc((100% - var(--max-width)) / 2));
+}
+
+.process > .section-label {
+    margin-bottom: 60px;
+}
+
+.process-heading {
+    max-width: 900px;
+    margin-bottom: 80px;
+}
+
+.process-heading h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.process-heading h2 span {
+    color: var(--accent);
+}
+
+
+/* Process cards */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.process-step {
+    min-height: 280px;
+
+    padding: 40px 30px;
+
+    background: var(--bg-card);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.process-step:hover {
+    background: #1c2620;
+}
+
+.process-number {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+.process-step h3 {
+    margin: 0 0 15px;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+}
+
+.process-step p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   WHY US
+========================================================= */
+
+.why-us {
+    padding: 150px max(7%, calc((100% - var(--max-width)) / 2));
+}
+
+.why-us > .section-label {
+    margin-bottom: 70px;
+}
+
+.why-us-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.why-us-heading h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.why-us-heading h2 span {
+    color: var(--accent);
+}
+
+
+/* Why cards */
+
+.why-us-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.why-card {
+    min-height: 240px;
+
+    padding: 35px;
+
+    background: var(--bg-card);
+
+    transition: background 0.3s ease;
+}
+
+.why-card:hover {
+    background: #1c2620;
+}
+
+.why-card > span {
+    color: var(--accent);
+    font-family: var(--font-mono);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+.why-card h3 {
+    margin: 45px 0 12px;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+}
+
+.why-card p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 180px 6%;
+
+    text-align: center;
+}
+
+.final-cta .section-label {
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.final-cta h2 {
+    margin: 0 0 35px;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.final-cta h2 span {
+    color: var(--accent);
+}
+
+.final-cta > p {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FADE ANIMATION
+========================================================= */
+
+.fade-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .page-hero {
+        min-height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero .hero-image {
+        order: -1;
+        min-height: 340px;
+    }
+
+
+    .repair-section {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .repair-section-reverse {
+        direction: ltr;
+    }
+
+    .repair-content {
+        max-width: 800px;
+    }
+
+    .repair-image {
+        height: 500px;
+    }
+
+    .repairs-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .repairs-intro .intro-content {
+        max-width: 800px;
+    }
+
+    .repairs-intro .repair-image {
+        height: 500px;
+    }
+
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .why-us-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Hero */
+
+    .page-hero {
+        min-height: 85vh;
+
+        padding: 130px 20px 80px;
+    }
+
+    .page-hero .hero-image {
+        display: none;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(3.5rem, 17vw, 6rem);
+    }
+
+    .page-hero-text {
+        font-size: 0.95rem;
+    }
+
+    .page-hero .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .page-hero .hero-buttons .btn {
+        text-align: center;
+    }
+
+
+    /* Intro */
+
+    .repairs-intro {
+        padding: 90px 20px;
+    }
+
+    .repairs-intro .repair-image {
+        height: 350px;
+
+        border-radius: var(--radius-small);
+    }
+
+    .repairs-intro .section-label {
+        margin-bottom: 25px;
+    }
+
+
+    /* Repair sections */
+
+    .repair-section {
+        padding: 80px 20px;
+
+        gap: 45px;
+    }
+
+    .repair-image {
+        height: 350px;
+
+        border-radius: var(--radius-small);
+    }
+
+    .repair-content h2 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+    }
+
+    .repairs-intro h2 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+    }
+
+    .repair-content .section-label {
+        margin-bottom: 25px;
+    }
+
+
+    /* List */
+
+    .repair-list {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    /* Process */
+
+    .process {
+        padding: 100px 20px;
+    }
+
+    .process-heading {
+        margin-bottom: 50px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        min-height: auto;
+
+        padding: 35px 25px;
+    }
+
+    .process-number {
+        margin-bottom: 35px;
+    }
+
+
+    /* Why us */
+
+    .why-us {
+        padding: 100px 20px;
+    }
+
+    .why-us-grid {
+        gap: 45px;
+    }
+
+    .why-us-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+    .why-card h3 {
+        margin-top: 30px;
+    }
+
+
+    /* Final CTA */
+
+    .final-cta {
+        padding: 120px 6%;
+    }
+
+    .final-cta h2 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .page-hero h1 {
+        font-size: 3.3rem;
+    }
+
+    .repair-image {
+        height: 280px;
+    }
+
+}
+
+/* =========================================================
+   STAGGERED REVEAL
+   ========================================================= */
+
+.process-grid > *:nth-child(2) { transition-delay: 0.06s; }
+.process-grid > *:nth-child(3) { transition-delay: 0.12s; }
+.process-grid > *:nth-child(4) { transition-delay: 0.18s; }
+
+.why-us-cards > *:nth-child(2) { transition-delay: 0.06s; }
+.why-us-cards > *:nth-child(3) { transition-delay: 0.12s; }
+.why-us-cards > *:nth-child(4) { transition-delay: 0.18s; }
