@@ -155,6 +155,12 @@
     height: 460px;
 }
 
+@media (max-width: 900px) {
+    .repairs-intro .repair-image {
+    display: none;
+}
+}
+
 .repairs-intro .section-label {
     margin-bottom: 30px;
 }
