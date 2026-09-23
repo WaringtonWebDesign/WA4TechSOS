@@ -172,7 +172,7 @@
     min-height: 460px;
 
     border-radius: var(--radius);
-
+    object-fit: cover;
     background:
         repeating-linear-gradient(
             0deg,
@@ -199,6 +199,12 @@
 
     object-fit: cover;
     scale: 1.11;
+}
+
+@media (max-width: 900px) {
+    .home-page .intro-image {
+        display: none;
+    }
 }
 
 .home-page .intro-image::before {
@@ -332,6 +338,16 @@
             transparent 32px
         ),
         #101a15;
+        object-fit: cover;
+}
+
+.home-page .service-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
 }
 
 .home-page .service-large .service-image {
@@ -367,15 +383,12 @@
 }
 
 
-/* When you add actual images */
-
 .home-page .phone-image {
     background-image:
         linear-gradient(
             rgba(15, 22, 19, 0.25),
             rgba(15, 22, 19, 0.4)
-        ),
-        url("../images/phone-repair.jpg");
+        );
     background-size: cover;
     background-position: center;
 }
@@ -385,8 +398,7 @@
         linear-gradient(
             rgba(15, 22, 19, 0.25),
             rgba(15, 22, 19, 0.4)
-        ),
-        url("../images/pc-repair.jpg");
+        );
     background-size: cover;
     background-position: center;
 }
@@ -396,8 +408,7 @@
         linear-gradient(
             rgba(15, 22, 19, 0.25),
             rgba(15, 22, 19, 0.4)
-        ),
-        url("../images/diagnostics.jpg");
+        );
     background-size: cover;
     background-position: center;
 }
@@ -407,8 +418,7 @@
         linear-gradient(
             rgba(15, 22, 19, 0.25),
             rgba(15, 22, 19, 0.4)
-        ),
-        url("../images/custom-pc.jpg");
+        );
     background-size: cover;
     background-position: center;
 }
