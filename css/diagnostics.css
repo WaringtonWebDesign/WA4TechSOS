@@ -195,6 +195,12 @@
         #101a15;
 }
 
+@media (max-width: 900px) {
+    .diagnostics-intro .intro-image {
+        display: none;
+    }
+}
+
 .diagnostics-intro .intro-image img {
     width: 100%;
     height: 100%;
