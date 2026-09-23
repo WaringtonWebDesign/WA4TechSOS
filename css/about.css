@@ -205,6 +205,12 @@
     object-fit: cover;
 }
 
+@media (max-width: 900px) {
+    .about-intro .intro-image {
+        display: none;
+    }
+}
+
 .about-intro .intro-image::before {
     content: "";
     position: absolute;
