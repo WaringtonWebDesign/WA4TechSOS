@@ -202,6 +202,12 @@
     object-fit: cover;
 }
 
+@media (max-width: 900px) {
+    .pc-intro .intro-image {
+        display: none;
+    }
+}
+
 .pc-intro .intro-image::before {
     content: "";
     position: absolute;
